@@ -25,7 +25,7 @@ class MNIST_dataset():
             transforms.ToTensor(),
             transforms.Normalize((0.1307,), (0.3081,)),
             transforms.RandomErasing(
-                p=0.5, scale=(0.02, 0.15), ratio=(0.3, 3.3), value=0
+                p=0.5, scale=(0.02, 0.20), ratio=(0.3, 3.3), value=0
             ),
         ])
 
@@ -44,7 +44,7 @@ class MNIST_dataset():
         data = datasets.MNIST(
             self.root,
             train=self.train,
-            transform=self.test_transforms,
+            transform=self.transforms,
             download=True
         )
         dataloader_args = dict(
@@ -57,4 +57,7 @@ class MNIST_dataset():
             batch_size=64
         )
         data_loader = DataLoader(data, **dataloader_args)
+        print(f"""
+        [INFO] {'train' if self.train else 'test'} dataset of size {len(data)} loaded...
+        """)
         return data_loader
