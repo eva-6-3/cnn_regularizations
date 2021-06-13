@@ -33,7 +33,7 @@ def train(
             loss = loss
         
         train_loss += loss.item()
-        train_losses.append(loss)
+        train_losses.append(loss.item())
 
         # Backpropagation
         loss.backward()
