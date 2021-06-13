@@ -19,7 +19,7 @@ Comparison / interaction study on Batch/Group/Layer Normalizations and L1/L2 los
     ├── testing.py              ## testing flow
     └── training.py             ## training flow
 ```
-## Parametrized Model
+## Parametrized Model Class
 Regularizers can be optionally selected during model instansiation.<br>
 User can instantiate models with/without dropout, BN, GN, LN by -- 
 ```python
