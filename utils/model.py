@@ -87,3 +87,6 @@ class Net(nn.Module):
 
         x = x.view(-1, 10)
         return F.log_softmax(x, dim=-1)
+    
+
+
