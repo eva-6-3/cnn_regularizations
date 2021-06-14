@@ -6,7 +6,8 @@ Comparison / interaction study on Batch/Group/Layer Normalizations and L1/L2 los
 3. Pramod Ramachandra Bhagwat - pramod@mistralsolutions.com
 4. Udaya Kumar NAndhanuru - udaya.k@mistralsolutions.com
 ------
-[Notebook Link](https://nbviewer.jupyter.org/github/askmuhsin/cnn_regularizations/blob/e7b2823f678b692cd7590c8c2e0c2415d7fbff97/training_nbs/training_assignment_v3.ipynb)
+
+Notebook Link  [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/askmuhsin/cnn_regularizations/HEAD?filepath=https%3A%2F%2Fgithub.com%2Faskmuhsin%2Fcnn_regularizations%2Fblob%2Fmain%2Ftraining_nbs%2Ftraining_assignment_v3.ipynb)
 
 ## File Structure
 ```
