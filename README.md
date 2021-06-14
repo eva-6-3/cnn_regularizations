@@ -7,6 +7,7 @@ Comparison / interaction study on Batch/Group/Layer Normalizations and L1/L2 los
 4. Udaya Kumar NAndhanuru - udaya.k@mistralsolutions.com
 ------
 
+## Notebook
 View Notebook -- [training_assignment_v3.ipynb](https://nbviewer.jupyter.org/github/askmuhsin/cnn_regularizations/blob/e7b2823f678b692cd7590c8c2e0c2415d7fbff97/training_nbs/training_assignment_v3.ipynb) <br>
 Run Notebook [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/askmuhsin/cnn_regularizations/HEAD?filepath=%2Ftraining_nbs%2Ftraining_assignment_v3.ipynb)
 
@@ -21,7 +22,9 @@ Run Notebook [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.o
     ├── testing.py              ## testing flow
     └── training.py             ## training flow
 ```
-## Parametrized Model Class
+
+## Model
+### Parametrized Model Class
 Regularizers can be optionally selected during model instansiation.<br>
 User can instantiate models with/without dropout, BN, GN, LN by -- 
 ```python
@@ -65,3 +68,39 @@ The block that does this is in `utils.model` -
         
         return nn.Sequential(*elements)
  ```
+ 
+### Model Architecture
+
+ 
+## Graphs
+<img src="https://github.com/askmuhsin/cnn_regularizations/blob/main/resources/acc_charts.png" alt="acc_charts" width="400"/><img src="https://github.com/askmuhsin/cnn_regularizations/blob/main/resources/loss_charts.png" alt="loss_charts" width="400"/>
+
+## Training Log
+- *Network with Group Normalization + L1*
+<img src="https://github.com/askmuhsin/cnn_regularizations/blob/main/resources/GN__L1_log.png" alt="GN_L1" width="300"/>
+
+- *Network with Layer Normalization + L2*
+<img src="https://github.com/askmuhsin/cnn_regularizations/blob/main/resources/LN__L2_log.png" alt="LN_L2" width="300"/>
+
+- *Network with L1 + L2 + BN* 
+<img src="https://github.com/askmuhsin/cnn_regularizations/blob/main/resources/BN__L1__L2_log.png" alt="BN__L1__L2_log" width="300"/>
+
+
+## Misclassified
+- *Misclassified -- Group Normalization + L1*
+<img src="https://github.com/askmuhsin/cnn_regularizations/blob/main/resources/GN__L1_wrong_preds.png" alt="GN__L1_wrong_preds" width="500"/>
+
+- *Misclassified -- Layer Normalization + L2*
+<img src="https://github.com/askmuhsin/cnn_regularizations/blob/main/resources/LN__L2_wrong_preds.png" alt="LN__L2_wrong_preds" width="500"/>
+
+- *Misclassified -- L1 + L2 + BN* 
+<img src="https://github.com/askmuhsin/cnn_regularizations/blob/main/resources/BN__L1__L2_wrong_preds.png" alt="BN__L1__L2_wrong_preds" width="500"/>
+
+
+write an explanatory README file that explains:
+what is your code all about,
+how to perform the 3 covered normalization (cannot use values from the excel sheet shared)
+show all 3 calculations for  4 sample 2x2 images (image shown in the content has 3 images)
+your findings for normalization techniques,
+
+
