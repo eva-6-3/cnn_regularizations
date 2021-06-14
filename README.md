@@ -99,4 +99,4 @@ The block that does this is in `utils.model` -
 
 write an explanatory README file that explains:
 ## google sheet
-your findings for normalization techniques,
+[LINK TO NORMALIZATION SHEET](https://docs.google.com/spreadsheets/d/1Z6VSqc_8zF97ixlkd4tSgOOCbAmFte5OcpZuBNg2jwo/edit?usp=sharing)
