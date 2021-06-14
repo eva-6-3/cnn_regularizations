@@ -98,9 +98,5 @@ The block that does this is in `utils.model` -
 
 
 write an explanatory README file that explains:
-what is your code all about,
-how to perform the 3 covered normalization (cannot use values from the excel sheet shared)
-show all 3 calculations for  4 sample 2x2 images (image shown in the content has 3 images)
+## google sheet
 your findings for normalization techniques,
-
-
