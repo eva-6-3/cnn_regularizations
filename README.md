@@ -81,7 +81,14 @@ The block that does this is in `utils.model` -
  ```
  
 ### Model Architecture
+- *Network with Group Normalization + L1*
+<img src="https://github.com/askmuhsin/cnn_regularizations/blob/main/resources/GN__L1_model.png" alt="GN_L1" width="300"/>
 
+- *Network with Layer Normalization + L2*
+<img src="https://github.com/askmuhsin/cnn_regularizations/blob/main/resources/LN__L2_model.png" alt="LN_L2" width="300"/>
+
+- *Network with L1 + L2 + BN* 
+<img src="https://github.com/askmuhsin/cnn_regularizations/blob/main/resources/BN__L1__L2_model.png" alt="BN__L1__L2_log" width="300"/>
  
 ## Graphs
 <img src="https://github.com/askmuhsin/cnn_regularizations/blob/main/resources/acc_charts.png" alt="acc_charts" width="400"/><img src="https://github.com/askmuhsin/cnn_regularizations/blob/main/resources/loss_charts.png" alt="loss_charts" width="400"/>
