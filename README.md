@@ -7,6 +7,17 @@ Comparison / interaction study on Batch/Group/Layer Normalizations and L1/L2 los
 4. Udaya Kumar NAndhanuru - udaya.k@mistralsolutions.com
 ------
 
+  * [Notebook](#notebook)
+  * [File Structure](#file-structure)
+  * [Model](#model)
+    + [Parametrized Model Class](#parametrized-model-class)
+    + [Model Architecture](#model-architecture)
+  * [Graphs](#graphs)
+  * [Training Log](#training-log)
+  * [Misclassified](#misclassified)
+  * [normalization sheet](#normalization-sheet)
+  * [Analysis](#analysis)
+
 ## Notebook
 View Notebook -- [training_assignment_v3.ipynb](https://nbviewer.jupyter.org/github/askmuhsin/cnn_regularizations/blob/e7b2823f678b692cd7590c8c2e0c2415d7fbff97/training_nbs/training_assignment_v3.ipynb) <br>
 Run Notebook [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/askmuhsin/cnn_regularizations/HEAD?filepath=%2Ftraining_nbs%2Ftraining_assignment_v3.ipynb)
@@ -97,6 +108,17 @@ The block that does this is in `utils.model` -
 <img src="https://github.com/askmuhsin/cnn_regularizations/blob/main/resources/BN__L1__L2_wrong_preds.png" alt="BN__L1__L2_wrong_preds" width="500"/>
 
 
-write an explanatory README file that explains:
-## google sheet
-[LINK TO NORMALIZATION SHEET](https://docs.google.com/spreadsheets/d/1Z6VSqc_8zF97ixlkd4tSgOOCbAmFte5OcpZuBNg2jwo/edit?usp=sharing)
+## normalization sheet
+[LINK TO NORMALIZATION SHEET](https://docs.google.com/spreadsheets/d/1Z6VSqc_8zF97ixlkd4tSgOOCbAmFte5OcpZuBNg2jwo/edit?usp=sharing)<br>
+<img src="https://github.com/askmuhsin/cnn_regularizations/blob/main/resources/Normalization_screenshot.png" alt="Normalization_screenshot" width="1000"/>
+
+## Analysis
+- The previous version of the model only had BatchNormalization and Dropout as Regularizations (other than image augmentations). 
+- In the current version we additionally tried L1 (lasso regularization), L2 (ridge regularization), Layer Normalization and Group Normalization.
+- Generally addition of none of the above regularizations performed any better than BN alone. (Atleast not within the first 25 epcohs).
+- L1 particularly increased the loss everytime. This is to be expected. l1_lambda was set to a small value. 
+- L1 regularized models also had low test accuracy.
+- BN, L1, and L2 combo had the least accuracy in the first few epochs, but performance increase consistently.
+- LN + L2 was the best out of the 3 current experiments. But it was also underperforming compared to the previous version of the model which just had BN.
+
+
